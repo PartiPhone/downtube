@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=downtube
+POSTGRES_USER=ryQRhBzjtizZfbwoNhecsPzkGvutHwBv
+POSTGRES_PASSWORD=KJPTX829q5xrpKMJk5dz33qLOnVaQno5n2NCCp47qIyLzX2rSPINq1JXRJ2vSYPi
