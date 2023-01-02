@@ -16,6 +16,7 @@ urlpatterns = [
     path("users/", include("downtube.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("", include("app.urls", namespace="app")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
