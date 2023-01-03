@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if video_list %}
+<ul class="list-unstyled container-fluid ">
+    {% for stream in video_list %}
+    <li>
+        <div  class="row border-rad color">
+            <div class="col p-3">
+                <h3><p class="text-end font-weight-bold fs-5">{{ stream.title }}</p></h3>
+                <a href="{{ stream.url }}">{{ stream.url }}</a>
+                <a href="{% url 'app:download' stream.video %}">Скачать</a>
+            </div>
+        </div>
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+
+{% endif %}
+{% endblock %}

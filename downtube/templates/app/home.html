@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="post" enctype="multipart/formm-data">
+{% crispy form %}
+</form>
+
+{% if stream %}
+    <a href="{% url 'app:home'  %}">Скачать</p>
+{% endif %}
+{% endblock %}
