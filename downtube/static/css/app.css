@@ -1,3 +1,11 @@
 .asteriskField {
     display: none;
 }
+
+.border-rad {
+    border-radius: 20px;
+}
+
+.color {
+    background-color: #DFEAF2;
+}

@@ -18,7 +18,7 @@ class Video(models.Model):
         if not user_streams.exists():
             super().save(*args, **kwargs)
         if not user_streams.filter(url=self.url).exists():
-            if user_streams.count() >= 2:
+            if user_streams.count() >= 10:
                 delete_stream = user_streams.first()
                 delete_stream.delete()
             super().save(*args, **kwargs)
