@@ -23,15 +23,3 @@ class UserDownloadForm(forms.ModelForm):
         labels = {
             "url": "Введите URL:",
         }
-
-
-class GuestDownloadForm(forms.Form):
-    url = forms.CharField(max_length=120, label="Введите URL:")
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.form_tag = False
-        self.helper.layout = Layout(
-            FieldWithButtons("url", Submit("download", "Загрузить")),
-        )
