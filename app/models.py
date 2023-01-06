@@ -22,3 +22,10 @@ class Video(models.Model):
                 delete_stream = user_streams.first()
                 delete_stream.delete()
             super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Видео"
+        verbose_name_plural = "Видео"
